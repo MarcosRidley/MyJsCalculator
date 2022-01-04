@@ -5,12 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ridley's Calculator app</title>
+    <script src="math.js" defer></script>
   </head>
   <body>
-    <div class="calculatorApp">
-      <div id="result">Current OP<br />Total</div>
-      <div id="killButtons">Clear and delete buttons</div>
-      <div id="numbers">Numbers and operations will be displayed here</div>
-    </div>
+    <main class="calculatorApp">
+      <div id="current" class="visor">Current OP</div>
+      <div id="result" class="visor">Total</div>
+      <div id="killButtons">
+        <button id="clear">Clear</button> <button id="delete">Delete</button>
+      </div>
+      <div id="numbers">
+        <button class="numerals">9</button><button class="numerals">8</button
+        ><button class="numerals">7</button><button class="numerals">6</button
+        ><button class="numerals">5</button><button class="numerals">4</button
+        ><button class="numerals">3</button><button class="numerals">2</button
+        ><button class="numerals">1</button><button class="numerals">0</button
+        ><button class="numerals">.</button><button class="operations">+</button
+        ><button class="operations">-</button
+        ><button class="operations">*</button
+        ><button class="operations">/</button>
+      </div>
+    </main>
   </body>
 </html>
