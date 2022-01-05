@@ -1,0 +1,97 @@
+html {
+  font-family: Trebuchet MS;
+}
+
+.calculatorApp {
+  width: 400px;
+  height: auto;
+  background-color: #aaa;
+  border-color: black;
+  border: 2px #101 solid;
+  border-radius: 12px;
+  padding: 24px;
+}
+#visor {
+  background-color: #eee;
+  text-align: right;
+  border: 2px #101 solid;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px 10px 15px;
+}
+
+.visorContent {
+  padding: 3px 10px 15px;
+}
+#current {
+  font-size: 14px;
+}
+#result {
+  font-size: 26px;
+}
+
+button {
+  font-size: 16px;
+  width: 41px;
+  height: 43px;
+  border-width: 1px;
+  color: #555;
+  border-color: rgba(0, 0, 0, 1);
+  font-weight: bold;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background: #eee;
+}
+
+button:hover {
+  background: rgba(200, 200, 200, 1);
+}
+button:active {
+  background-color: #bbb;
+}
+
+#killButtons {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+}
+.killbtns {
+  width: 82px;
+  height: 43px;
+  text-shadow: none;
+}
+
+#clear {
+  /* background-color: #f55; */
+  color: #f00;
+}
+/* #clear:hover {
+  background-color: #f2;
+}
+#clear:active {
+  background-color: #f00;
+} */
+/*
+#delete {
+  background-color: #88f;
+}
+#delete:hover {
+  background-color: #55f;
+}
+#delete:active {
+  background-color: #00f;
+} */
+
+#numbersAndOperations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 5px;
+}
+
+.numerals,
+.operations {
+  flex: 1 0 22%;
+}
