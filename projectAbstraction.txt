@@ -1,0 +1,24 @@
+string inicial é 0
+ao clicar num número deve retirar o 0 e concatenar o número com o novo número
+a concatenação dos dois numeros deve aparecer no campo RESULTADO do visor
+ao clicar num operador o número total gerado deve ser gravado na memória como a da função doMath()
+o número total gerado deve ser enviado para o campo CURRENT do visor, juntamente com o operador selecionado
+ao digitar um novo número deve o correr a mesma coisa do passo 2
+ao clicar em um operador o número mostrado no display deve ser salvo como b de doMath() e o operador deve ser enviado para a função doMath como terceiro parametro
+a função doMath retornará o resultado da operação, que deve aparecer no campo RESULTADO do visor
+
+definir no HTML resultado como 0
+usar relação if para se no HTML tiver exatamente 0 ele limpar antes de concatenar o próximo número
+usar toString() para concatenar os números e fazer aparecer eles no campo RESULTADO
+
+clicar num operador salva o atual textContent de RESULTADO e transforma em número com Number(textContent), salvando na variável numberA o number(textcontent) ->
+e na variável operation a operação solicitada (pode ser "+", "-", "*" ou "/")
+além disso clicar num operador também concatena o operador no número que está no campo resultado do visor e envia ele para o campo CURRENT do visor
+se numberA não for vazio, o campo RESULTADO muda de comportamento e guarda o novo valor digitado em numberB ao se clicar em qualquer operador
+Armado de numberA, numberB e operator, é possível ativar a função doMath();
+resultado de doMath(numberA, numberB, operator) é transferido para RESULTADO no visor e numberA e numberB são limpos, reiniciando o ciclo.
+
+ao se clicar em Delete, RESULTADO é sliçado e perde um número utilizando str.slice(-1).
+ao se clicar em Clear, RESULTADO é definido como 0, CURRENT é definido como "" e as variáveis numberA e numberB são zeradas (em outras palavras o ciclo é 100% reiniciado).
+
+
