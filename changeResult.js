@@ -19,6 +19,9 @@ function concatNumbers(scrambledNumber) {
       convertnumber(scrambledNumber)
     );
   }
+  while (concatenatedString.length > 16) {
+    concatenatedString = concatenatedString.slice(0, -1);
+  }
   return concatenatedString;
 }
 
