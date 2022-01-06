@@ -14,9 +14,11 @@ function concatNumbers(scrambledNumber) {
     result.textContent = "";
   }
   let concatenatedString = result.textContent;
-  concatenatedString = concatenatedString.concat(
-    convertnumber(scrambledNumber)
-  );
+  if (!result.textContent.includes(".") || scrambledNumber !== 9) {
+    concatenatedString = concatenatedString.concat(
+      convertnumber(scrambledNumber)
+    );
+  }
   return concatenatedString;
 }
 

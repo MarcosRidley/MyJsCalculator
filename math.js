@@ -10,7 +10,6 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 const operators = document.querySelectorAll(".operations");
-console.log(operators);
 let pressedOperator;
 for (let i = 0; i < operators.length; i++) {
   operators[i].addEventListener("click", () => writeOperation(i));
