@@ -90,7 +90,11 @@ function doMath(a, b, operation) {
 
 function checkWhichOperator(whichOperator) {
   if (whichOperator == "÷") {
-    result.textContent = doMath(numberA, numberB, "/");
+    if (numberB !== 0) {
+      result.textContent = doMath(numberA, numberB, "/");
+    } else {
+      result.textContent = "Error, cannot divide by zero";
+    }
   }
   if (whichOperator == "x") {
     result.textContent = doMath(numberA, numberB, "*");

@@ -10,7 +10,10 @@ function changeResult(conteudo) {
 }
 
 function concatNumbers(scrambledNumber) {
-  if (result.textContent == 0) {
+  if (
+    result.textContent == 0 ||
+    result.textContent == "Error, cannot divide by zero"
+  ) {
     result.textContent = "";
   }
   let concatenatedString = result.textContent;
