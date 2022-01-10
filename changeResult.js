@@ -10,6 +10,10 @@ function changeResult(conteudo) {
 }
 
 function concatNumbers(scrambledNumber) {
+  if (isResult == true) {
+    result.textContent = "";
+    isResult = false;
+  }
   if (
     result.textContent == 0 ||
     result.textContent == "Error, cannot divide by zero"
@@ -33,6 +37,7 @@ function clearAll() {
   current.textContent = "Start";
   numberA = "";
   numberB = "";
+  isResult = false;
 }
 
 function clearLastNumber() {

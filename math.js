@@ -5,6 +5,8 @@ let numberA = "";
 let numberB = "";
 let whichOperator = "";
 let lastOperator = "";
+let isResult = false;
+let finalResult = false;
 for (let i = 0; i < numbers.length; i++) {
   numbers[i].addEventListener("click", () => changeResult(concatNumbers(i)));
 }
@@ -28,7 +30,12 @@ function writeOperation(originOperator) {
     numberA = Number(numberA);
     checkWhichOperator(whichOperator);
     current.textContent = current.textContent + "" + numberB + whichOperator;
-    numberA = "";
+    if (finalResult == true) {
+      numberA = "";
+      finalResult = false;
+    } else {
+      numberA = Number(result.textContent);
+    }
     numberB = "";
   }
 }
@@ -89,23 +96,23 @@ function doMath(a, b, operation) {
 }
 
 function checkWhichOperator(whichOperator) {
-  if (whichOperator == "÷") {
+  if (whichOperator == "÷" && lastOperator == whichOperator) {
     if (numberB !== 0) {
       result.textContent = doMath(numberA, numberB, "/");
     } else {
       result.textContent = "Error, cannot divide by zero";
     }
-  }
-  if (whichOperator == "x") {
+  } else if (whichOperator == "x" && lastOperator == whichOperator) {
     result.textContent = doMath(numberA, numberB, "*");
-  }
-  if (whichOperator == "-") {
+  } else if (whichOperator == "-" && lastOperator == whichOperator) {
     result.textContent = doMath(numberA, numberB, "-");
-  }
-  if (whichOperator == "+") {
+  } else if (whichOperator == "+" && lastOperator == whichOperator) {
     result.textContent = doMath(numberA, numberB, "+");
-  }
-  if (whichOperator == "=") {
+  } else {
     checkWhichOperator(lastOperator);
   }
+  if (whichOperator == "=") {
+    finalResult = true;
+  }
+  isResult = true;
 }
